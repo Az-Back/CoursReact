@@ -5,7 +5,16 @@ function Header() {
 };
 
 function Description() {
-    return (<p>Ici achetez toutes les plantes dont vous avez toujours rêvé 🌵🌱🎍</p>)
+        const text = "Ici achetez toutes les plantes dont vous avez toujours rêvées"
+        const emojis = "🤑🤑🤑"
+        return (<p>{ text.slice(0, 12) + emojis }</p>)
+};
+
+function Banner() {
+    return (<div>
+        <Header />
+        <Description />
+    </div>)
 };
 
 ReactDOM.render(<div><Header /><Description /></div>, document.getElementById("root"))
